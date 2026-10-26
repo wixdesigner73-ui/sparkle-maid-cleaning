@@ -17,7 +17,7 @@ Search the HTML files for `EDITABLE` — each marks content that is a placeholde
 
 - **Services** (4 categories, descriptions) — `index.html`, `services.html`, and the dropdown in `contact.html`. No prices, guarantees or inclusions have been added.
 - **Testimonials** — three placeholder cards in `index.html`. Replace with real reviews (with permission). No ratings or statistics are shown.
-- **Meet Kristen** — `about.html`. Add her story and photo (`images/kristen.jpg`, swap the "K" block for an `<img>`).
+- **Meet Kristen** — `about.html`. Add her story and photo (replace the dummy portrait `images/kristen-placeholder.jpg` and its alt text).
 - **Mission and values** — `about.html`; "Why choose us" points — `index.html`.
 - **Contact details** — only the phone number (762) 867-9326 is used. No address, email or service area has been invented.
 

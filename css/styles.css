@@ -29,7 +29,7 @@
 
 /* ---------- Reset & base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--header-h) + 16px); }
+html { overflow-x: hidden; scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--header-h) + 16px); }
 body {
   margin: 0;
   font-family: var(--ff-body);
@@ -37,7 +37,6 @@ body {
   line-height: 1.65;
   color: var(--ink);
   background: var(--white);
-  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 img { display: block; max-width: 100%; height: auto; }
@@ -534,3 +533,15 @@ select.input { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://ww
 .contact-art .main img { object-position: 78% 50%; }
 .services-hero .spark.hs1 { left: 7%; bottom: 34%; }
 .services-hero .bubble.h3b { right: 6%; bottom: 20%; }
+.kristen-photo img { object-position: 50% 25%; }
+
+/* Never let off-screen reveal offsets or decorations widen the page on phones */
+@supports (overflow: clip) {
+  html, body { overflow-x: clip; }
+}
+@media (max-width: 960px) {
+  .js .reveal-left, .js .reveal-right { transform: translateY(28px); }
+  .svc-media::before, .svc-feature:nth-child(even) .svc-media::before { inset: 16px 0 -14px 0; }
+  .contact-art .sm { right: 0; }
+}
+@media (max-width: 640px) { .collage .dots { left: 0; top: -16px; } }
